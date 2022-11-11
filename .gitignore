@@ -14,6 +14,8 @@
 /docker-compose.override.yml
 /docker/mysql/data/
 
+auth.json
+
 ###> symfony/framework-bundle ###
 /composer.lock
 /.env.*.local
