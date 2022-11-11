@@ -1,0 +1,30 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  DOCKER_PHP_SERVICE: composer
+
+tasks:
+  install:
+    desc: Install Sylius
+    cmds:
+      - docker-compose --profile=$DOCKER_PHP_SERVICE up -d
+      - docker-compose exec --user=33:33 $DOCKER_PHP_SERVICE php bin/console sylius:install --no-interaction -vvv
+      - task: fixtures
+      - docker-compose exec --user=33:33 $DOCKER_PHP_SERVICE php bin/console sylius:install:assets -vvv
+      - docker-compose exec --user=33:33 $DOCKER_PHP_SERVICE php bin/console sylius:theme:assets:install public --no-interaction
+      - docker-compose exec $DOCKER_PHP_SERVICE php bin/console lexik:jwt:generate-keypair --skip-if-exists --no-interaction
+  fixtures:
+    desc: Install Sylius Fixtures
+    cmds:
+      - docker-compose exec --user=33:33 $DOCKER_PHP_SERVICE php bin/console sylius:fixtures:load default --no-interaction  -vvv
+  clean:
+    cmds:
+      - docker-compose --profile=$DOCKER_PHP_SERVICE down -v
+  db-clean:
+    cmds:
+      - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:database:drop --if-exists --force
+      - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:database:create
+      - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:migrations:migrate --no-interaction
+      - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:schema:validate
