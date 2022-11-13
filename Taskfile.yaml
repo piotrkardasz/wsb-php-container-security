@@ -28,3 +28,19 @@ tasks:
       - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:database:create
       - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:migrations:migrate --no-interaction
       - docker-compose exec $DOCKER_PHP_SERVICE php bin/console doctrine:schema:validate
+  build:
+    dir: .docker/php
+    cmds:
+      - docker build --target php-distroless --progress plain -t piotrkardasz/sylius-distroless:php-distroless .
+      - docker build --target php-debian --progress plain -t piotrkardasz/sylius-distroless:php-debian .
+      - docker build --target php-sury-debian --progress plain -t piotrkardasz/sylius-distroless:php-sury-debian .
+      - docker build --target php-sury-ubuntu --progress plain -t piotrkardasz/sylius-distroless:php-sury-ubuntu .
+      - docker build --target php-alpine --progress plain -t piotrkardasz/sylius-distroless:php-alpine .
+  publish:
+    dir: .docker/php
+    cmds:
+      - docker push piotrkardasz/sylius-distroless:php-distroless
+      - docker push piotrkardasz/sylius-distroless:php-debian
+      - docker push piotrkardasz/sylius-distroless:php-sury-debian
+      - docker push piotrkardasz/sylius-distroless:php-sury-ubuntu
+      - docker push piotrkardasz/sylius-distroless:php-alpine
