@@ -5,6 +5,11 @@ version: '3'
 env:
   DOCKER_PHP_SERVICE: composer
 
+includes:
+  docker:
+    taskfile: .docker/php/DockerTasks.yml
+    dir: .docker/php
+
 tasks:
   install:
     desc: Install Sylius
@@ -31,16 +36,18 @@ tasks:
   build:
     dir: .docker/php
     cmds:
-      - docker build --target php-distroless --progress plain -t piotrkardasz/sylius-distroless:php-distroless .
-      - docker build --target php-debian --progress plain -t piotrkardasz/sylius-distroless:php-debian .
-      - docker build --target php-sury-debian --progress plain -t piotrkardasz/sylius-distroless:php-sury-debian .
-      - docker build --target php-sury-ubuntu --progress plain -t piotrkardasz/sylius-distroless:php-sury-ubuntu .
-      - docker build --target php-alpine --progress plain -t piotrkardasz/sylius-distroless:php-alpine .
+      - docker build --target php-distroless --progress plain -t piotrkardasz/sylius-distroless-2023:php-distroless .
+      - docker build --target php-debian --progress plain -t piotrkardasz/sylius-distroless-2023:php-debian .
+      - docker build --target php-sury-debian --progress plain -t piotrkardasz/sylius-distroless-2023:php-sury-debian .
+      - docker build --target php-sury-ubuntu --progress plain -t piotrkardasz/sylius-distroless-2023:php-sury-ubuntu .
+      - docker build --target php-alpine --progress plain -t piotrkardasz/sylius-distroless-2023:php-alpine .
+      - docker build --target php-sury-debian-no-gd --progress plain -t piotrkardasz/sylius-distroless-2023:php-sury-debian-no-gd .
   publish:
     dir: .docker/php
     cmds:
-      - docker push piotrkardasz/sylius-distroless:php-distroless
-      - docker push piotrkardasz/sylius-distroless:php-debian
-      - docker push piotrkardasz/sylius-distroless:php-sury-debian
-      - docker push piotrkardasz/sylius-distroless:php-sury-ubuntu
-      - docker push piotrkardasz/sylius-distroless:php-alpine
+      - docker push piotrkardasz/sylius-distroless-2023:php-distroless
+      - docker push piotrkardasz/sylius-distroless-2023:php-debian
+      - docker push piotrkardasz/sylius-distroless-2023:php-sury-debian
+      - docker push piotrkardasz/sylius-distroless-2023:php-sury-ubuntu
+      - docker push piotrkardasz/sylius-distroless-2023:php-alpine
+      - docker push piotrkardasz/sylius-distroless-2023:php-sury-debian-no-gd

@@ -1,0 +1,81 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+    DOCKER_REPOSITORY: piotrkardasz/sylius-distroless-2023
+
+tasks:
+    build:php-fpm-bullseye:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bullseye
+                DOCKER_DIR_NAME: php-fpm-bullseye  
+    build:php-fpm-bullseye-lunar-rebuild:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bullseye-lunar-rebuild
+                DOCKER_DIR_NAME: php-fpm-bullseye-lunar-rebuild
+    build:php-fpm-alpine3.16-rebuild:
+        -   task: build-image-direct
+            vars:
+                DOCKER_IMAGE: php-fpm-alpine3.16-rebuild
+                DOCKER_DIR_NAME: php-fpm-alpine3.16-rebuild
+    build:php-fpm-alpine3.16:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-alpine3.16
+                DOCKER_DIR_NAME: php-fpm-alpine3.16
+    build:php-fpm-alpine3.17:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-alpine3.17
+                DOCKER_DIR_NAME: php-fpm-alpine3.17
+    build:php-fpm-bullseye-sury:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bullseye-sury
+                DOCKER_DIR_NAME: php-fpm-bullseye-sury
+    build:php-fpm-bookworm-sury:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bookworm-sury
+                DOCKER_DIR_NAME: php-fpm-bookworm-sury
+    build:php-fpm-bullseye-sury-optional-no-gd:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bullseye-sury-optional-no-gd
+                DOCKER_DIR_NAME: php-fpm-bullseye-sury-optional-no-gd
+    build:php-fpm-jammy-sury:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-jammy-sury
+                DOCKER_DIR_NAME: php-fpm-jammy-sury
+    build:php-fpm-bullseye-distroless:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-bullseye-distroless
+                DOCKER_DIR_NAME: php-fpm-bullseye-distroless
+    build:php-fpm-lunar-sury:
+        -   task: build-image
+            vars:
+                DOCKER_IMAGE: php-fpm-lunar-sury
+                DOCKER_DIR_NAME: php-fpm-lunar-sury
+    build:php-fpm-lunar-base:
+        -   task: build-image-direct
+            vars:
+                DOCKER_IMAGE: php-fpm-lunar-base
+                DOCKER_DIR_NAME: php-fpm-lunar-base
+    build:php-fpm-bookworm-base:
+        -   task: build-image-direct
+            vars:
+                DOCKER_IMAGE: php-fpm-bookworm-base
+                DOCKER_DIR_NAME: php-fpm-bookworm-base
+    build-image:
+        internal: true
+        cmds:
+            - docker build -f ./{{.DOCKER_DIR_NAME}}/Dockerfile --progress plain -t $DOCKER_REPOSITORY:{{.DOCKER_IMAGE}} .
+    build-image-direct:
+        internal: true
+        cmds:
+            - cd {{.DOCKER_DIR_NAME}} && docker build --progress plain -t $DOCKER_REPOSITORY:{{.DOCKER_IMAGE}} .
