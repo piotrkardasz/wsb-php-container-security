@@ -1,0 +1,118 @@
+
+Testing piotrkardasz/sylius-distroless-base-images:cc-debian11-nonroot-amd64...
+
+✗ Low severity vulnerability found in openssl/libssl1.1
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-OPENSSL-3368735
+  Introduced through: openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4 > openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4
+
+✗ Low severity vulnerability found in openssl/libssl1.1
+  Description: Cryptographic Issues
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-OPENSSL-518334
+  Introduced through: openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4 > openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4
+
+✗ Low severity vulnerability found in openssl/libssl1.1
+  Description: Cryptographic Issues
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-OPENSSL-525332
+  Introduced through: openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4 > openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4
+
+✗ Low severity vulnerability found in openssl/libssl1.1
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-OPENSSL-5291773
+  Introduced through: openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4 > openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4
+
+✗ Low severity vulnerability found in openssl/libssl1.1
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-OPENSSL-5291777
+  Introduced through: openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4 > openssl/libssl1.1@1.1.1n-0+deb11u4
+  From: openssl@1.1.1n-0+deb11u4
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Out-of-Bounds
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-521063
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-521199
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Use of Insufficiently Random Values
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-522385
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Information Exposure
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-529848
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: CVE-2019-1010023
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-531451
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-531492
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+✗ Low severity vulnerability found in glibc/libc6
+  Description: Resource Management Errors
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-GLIBC-532215
+  Introduced through: glibc/libc6@2.31-13+deb11u5, gcc-10/libgomp1@10.2.1-6, gcc-10/libstdc++6@10.2.1-6, openssl/libssl1.1@1.1.1n-0+deb11u4, openssl@1.1.1n-0+deb11u4
+  From: glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libgomp1@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  From: gcc-10/libstdc++6@10.2.1-6 > glibc/libc6@2.31-13+deb11u5
+  and 2 more...
+
+
+
+Organization:      piotrkardasz-924
+Package manager:   deb
+Project name:      docker-image|piotrkardasz/sylius-distroless-base-images
+Docker image:      piotrkardasz/sylius-distroless-base-images:cc-debian11-nonroot-amd64
+Platform:          linux/amd64
+Licenses:          enabled
+
+Tested 9 dependencies for known issues, found 12 issues.
+
+

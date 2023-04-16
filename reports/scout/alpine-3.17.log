@@ -1,0 +1,8 @@
+Analyzing image piotrkardasz/sylius-distroless-base-images:alpine-3.17
+    ...Storing image for indexing
+    ✓ Image stored for indexing
+    ...Indexing
+WARN Failed to parse purl: pkg:/@1.35.0    ✓ Indexed 19 packages
+    ✓ No vulnerable package detected
+
+

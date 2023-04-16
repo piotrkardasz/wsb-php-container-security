@@ -1,0 +1,307 @@
+{
+  "SchemaVersion": 2,
+  "ArtifactName": "piotrkardasz/sylius-distroless-base-images:alpine-3.17",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "OS": {
+      "Family": "alpine",
+      "Name": "3.17.3"
+    },
+    "ImageID": "sha256:9ed4aefc74f6792b5a804d1d146fe4b4a2299147b0f50eaf2b08435d7b38c27e",
+    "DiffIDs": [
+      "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+    ],
+    "RepoTags": [
+      "alpine:3.17",
+      "piotrkardasz/alpine-3.17:latest",
+      "piotrkardasz/sylius-distroless-base-images:alpine-3.17"
+    ],
+    "RepoDigests": [
+      "alpine@sha256:124c7d2707904eea7431fffe91522a01e5a861a624ee31d03372cc1d138a3126",
+      "piotrkardasz/sylius-distroless-base-images@sha256:b6ca290b6b4cdcca5b3db3ffa338ee0285c11744b4a6abaa9627746ee3291d8d"
+    ],
+    "ImageConfig": {
+      "architecture": "amd64",
+      "container": "1e530a8a0c2776c0e05b402d969d44dc48f9c09be710db6ce60badb11aa799cf",
+      "created": "2023-03-29T18:19:24.45578926Z",
+      "docker_version": "20.10.23",
+      "history": [
+        {
+          "created": "2023-03-29T18:19:24Z",
+          "created_by": "/bin/sh -c #(nop) ADD file:9a4f77dfaba7fd2aa78186e4ef0e7486ad55101cefc1fabbc1b385601bb38920 in / "
+        },
+        {
+          "created": "2023-03-29T18:19:24Z",
+          "created_by": "/bin/sh -c #(nop)  CMD [\"/bin/sh\"]",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/bin/sh"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "Image": "sha256:993ad5f2f69d8c8204be99ed8d26a4ba87c5ba4fe3602dbb04c48743d86b1a13"
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "piotrkardasz/sylius-distroless-base-images:alpine-3.17 (alpine 3.17.3)",
+      "Class": "os-pkgs",
+      "Type": "alpine",
+      "Packages": [
+        {
+          "ID": "alpine-baselayout@3.4.0-r0",
+          "Name": "alpine-baselayout",
+          "Version": "3.4.0-r0",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.4.0-r0",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "alpine-baselayout-data@3.4.0-r0",
+            "busybox-binsh@1.35.0-r29"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "alpine-baselayout-data@3.4.0-r0",
+          "Name": "alpine-baselayout-data",
+          "Version": "3.4.0-r0",
+          "SrcName": "alpine-baselayout",
+          "SrcVersion": "3.4.0-r0",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "alpine-keys@2.4-r1",
+          "Name": "alpine-keys",
+          "Version": "2.4-r1",
+          "SrcName": "alpine-keys",
+          "SrcVersion": "2.4-r1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "apk-tools@2.12.10-r1",
+          "Name": "apk-tools",
+          "Version": "2.12.10-r1",
+          "SrcName": "apk-tools",
+          "SrcVersion": "2.12.10-r1",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "ca-certificates-bundle@20220614-r4",
+            "libcrypto3@3.0.8-r3",
+            "libssl3@3.0.8-r3",
+            "musl@1.2.3-r4",
+            "zlib@1.2.13-r0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "busybox@1.35.0-r29",
+          "Name": "busybox",
+          "Version": "1.35.0-r29",
+          "SrcName": "busybox",
+          "SrcVersion": "1.35.0-r29",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "busybox-binsh@1.35.0-r29",
+          "Name": "busybox-binsh",
+          "Version": "1.35.0-r29",
+          "SrcName": "busybox",
+          "SrcVersion": "1.35.0-r29",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "busybox@1.35.0-r29"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "ca-certificates-bundle@20220614-r4",
+          "Name": "ca-certificates-bundle",
+          "Version": "20220614-r4",
+          "SrcName": "ca-certificates",
+          "SrcVersion": "20220614-r4",
+          "Licenses": [
+            "MPL-2.0",
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "libc-utils@0.7.2-r3",
+          "Name": "libc-utils",
+          "Version": "0.7.2-r3",
+          "SrcName": "libc-dev",
+          "SrcVersion": "0.7.2-r3",
+          "Licenses": [
+            "BSD-2-Clause",
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "musl-utils@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "libcrypto3@3.0.8-r3",
+          "Name": "libcrypto3",
+          "Version": "3.0.8-r3",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.8-r3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "libssl3@3.0.8-r3",
+          "Name": "libssl3",
+          "Version": "3.0.8-r3",
+          "SrcName": "openssl",
+          "SrcVersion": "3.0.8-r3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "libcrypto3@3.0.8-r3",
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "musl@1.2.3-r4",
+          "Name": "musl",
+          "Version": "1.2.3-r4",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.3-r4",
+          "Licenses": [
+            "MIT"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "musl-utils@1.2.3-r4",
+          "Name": "musl-utils",
+          "Version": "1.2.3-r4",
+          "SrcName": "musl",
+          "SrcVersion": "1.2.3-r4",
+          "Licenses": [
+            "MIT",
+            "BSD-2-Clause",
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r4",
+            "scanelf@1.3.5-r1"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "scanelf@1.3.5-r1",
+          "Name": "scanelf",
+          "Version": "1.3.5-r1",
+          "SrcName": "pax-utils",
+          "SrcVersion": "1.3.5-r1",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "ssl_client@1.35.0-r29",
+          "Name": "ssl_client",
+          "Version": "1.35.0-r29",
+          "SrcName": "busybox",
+          "SrcVersion": "1.35.0-r29",
+          "Licenses": [
+            "GPL-2.0"
+          ],
+          "DependsOn": [
+            "libcrypto3@3.0.8-r3",
+            "libssl3@3.0.8-r3",
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        },
+        {
+          "ID": "zlib@1.2.13-r0",
+          "Name": "zlib",
+          "Version": "1.2.13-r0",
+          "SrcName": "zlib",
+          "SrcVersion": "1.2.13-r0",
+          "Licenses": [
+            "Zlib"
+          ],
+          "DependsOn": [
+            "musl@1.2.3-r4"
+          ],
+          "Layer": {
+            "DiffID": "sha256:f1417ff83b319fbdae6dd9cd6d8c9c88002dcd75ecf6ec201c8c6894681cf2b5"
+          }
+        }
+      ]
+    }
+  ]
+}

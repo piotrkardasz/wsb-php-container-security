@@ -1,0 +1,8 @@
+Analyzing image piotrkardasz/sylius-distroless-base-images:cc-debian11-nonroot-amd64
+    ...Storing image for indexing
+    ✓ Image stored for indexing
+    ...Indexing
+    ✓ Indexed 11 packages
+    ✓ No vulnerable package detected
+
+

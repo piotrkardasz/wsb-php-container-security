@@ -1,0 +1,5 @@
+Analyzing image piotrkardasz/sylius-distroless-base-images:alpine-3.16
+    ✓ SBOM of image already cached, 18 packages indexed
+    ✓ No vulnerable package detected
+
+

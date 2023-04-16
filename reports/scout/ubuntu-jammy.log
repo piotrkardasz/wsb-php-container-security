@@ -1,0 +1,123 @@
+Analyzing image piotrkardasz/sylius-distroless-base-images:ubuntu-jammy
+    ...Storing image for indexing
+    ✓ Image stored for indexing
+    ...Indexing
+    ✓ Indexed 143 packages
+    ✗ Detected 8 vulnerable packages with a total of 11 vulnerabilities
+
+  0C    0H    0M    4L  openssl 3.0.2-0ubuntu1.8
+pkg:deb/ubuntu/openssl@3.0.2-0ubuntu1.8?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2023-0464 [Improper Certificate Validation]
+      https://dso.docker.com/cve/CVE-2023-0464
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+    ✗ LOW CVE-2022-3996 [Improper Locking]
+      https://dso.docker.com/cve/CVE-2022-3996
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+    ✗ LOW CVE-2023-0465 [Improper Certificate Validation]
+      https://dso.docker.com/cve/CVE-2023-0465
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 5.3                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N  
+    
+    ✗ LOW CVE-2023-0466 [Improper Certificate Validation]
+      https://dso.docker.com/cve/CVE-2023-0466
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 5.3                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N  
+    
+
+  0C    0H    0M    1L  pcre3 2:8.39-13ubuntu0.22.04.1
+pkg:deb/ubuntu/pcre3@2:8.39-13ubuntu0.22.04.1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2017-11164 [Uncontrolled Recursion]
+      https://dso.docker.com/cve/CVE-2017-11164
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+
+  0C    0H    0M    1L  glibc 2.35-0ubuntu3.1
+pkg:deb/ubuntu/glibc@2.35-0ubuntu3.1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2016-20013 [Allocation of Resources Without Limits or Throttling]
+      https://dso.docker.com/cve/CVE-2016-20013
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+
+  0C    0H    0M    1L  libzstd 1.4.8+dfsg-3build1
+pkg:deb/ubuntu/libzstd@1.4.8+dfsg-3build1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2022-4899 [Uncontrolled Resource Consumption]
+      https://dso.docker.com/cve/CVE-2022-4899
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
+    
+
+  0C    0H    0M    1L  bash 5.1-6ubuntu1
+pkg:deb/ubuntu/bash@5.1-6ubuntu1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2022-3715 [Out-of-bounds Write]
+      https://dso.docker.com/cve/CVE-2022-3715
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.8                                           
+      CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H  
+    
+
+  0C    0H    0M    1L  gnupg2 2.2.27-3ubuntu2.1
+pkg:deb/ubuntu/gnupg2@2.2.27-3ubuntu2.1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2022-3219 [Out-of-bounds Write]
+      https://dso.docker.com/cve/CVE-2022-3219
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 5.5                                           
+      CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H  
+    
+
+  0C    0H    0M    1L  coreutils 8.32-4.1ubuntu1
+pkg:deb/ubuntu/coreutils@8.32-4.1ubuntu1?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2016-2781 [Improper Input Validation]
+      https://dso.docker.com/cve/CVE-2016-2781
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 6.5                                           
+      CVSS Vector    : CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N  
+    
+
+  0C    0H    0M    1L  ncurses 6.3-2
+pkg:deb/ubuntu/ncurses@6.3-2?os_distro=jammy&os_name=ubuntu&os_version=22.04
+
+    ✗ LOW CVE-2022-29458 [Out-of-bounds Read]
+      https://dso.docker.com/cve/CVE-2022-29458
+      Affected range : >=0                                           
+      Fixed version  : not fixed                                     
+      CVSS Score     : 7.1                                           
+      CVSS Vector    : CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H  
+    
+
+
+The image contains 8 packages with one or more vulnerability for a total of 11 vulnerabilities
+  LOW      | 11  
+  MEDIUM   | 0   
+  HIGH     | 0   
+  CRITICAL | 0   
+

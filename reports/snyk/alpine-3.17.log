@@ -1,0 +1,16 @@
+
+Testing piotrkardasz/sylius-distroless-base-images:alpine-3.17...
+
+Organization:      piotrkardasz-924
+Package manager:   apk
+Project name:      docker-image|piotrkardasz/sylius-distroless-base-images
+Docker image:      piotrkardasz/sylius-distroless-base-images:alpine-3.17
+Platform:          linux/amd64
+Base image:        alpine:3.17.3
+Licenses:          enabled
+
+✔ Tested 15 dependencies for known issues, no vulnerable paths found.
+
+According to our scan, you are currently using the most secure version of the selected base image
+
+

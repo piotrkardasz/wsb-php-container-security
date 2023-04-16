@@ -1,0 +1,100 @@
+
+Testing piotrkardasz/sylius-distroless-base-images:ubuntu-jammy...
+
+✗ Low severity vulnerability found in pcre3/libpcre3
+  Description: Uncontrolled Recursion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-PCRE3-2799820
+  Introduced through: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1, grep@3.7-1build1
+  From: pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+  From: grep@3.7-1build1 > pcre3/libpcre3@2:8.39-13ubuntu0.22.04.1
+
+✗ Low severity vulnerability found in openssl/libssl3
+  Description: Improper Locking
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-3167951
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.8, adduser@3.118ubuntu5
+  From: openssl/libssl3@3.0.2-0ubuntu1.8
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libkrb5-3@1.19.2-2ubuntu0.1 > openssl/libssl3@3.0.2-0ubuntu1.8
+
+✗ Low severity vulnerability found in openssl/libssl3
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-3368847
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.8, adduser@3.118ubuntu5
+  From: openssl/libssl3@3.0.2-0ubuntu1.8
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libkrb5-3@1.19.2-2ubuntu0.1 > openssl/libssl3@3.0.2-0ubuntu1.8
+
+✗ Low severity vulnerability found in openssl/libssl3
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-5296052
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.8, adduser@3.118ubuntu5
+  From: openssl/libssl3@3.0.2-0ubuntu1.8
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libkrb5-3@1.19.2-2ubuntu0.1 > openssl/libssl3@3.0.2-0ubuntu1.8
+
+✗ Low severity vulnerability found in openssl/libssl3
+  Description: Improper Certificate Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-OPENSSL-5296082
+  Introduced through: openssl/libssl3@3.0.2-0ubuntu1.8, adduser@3.118ubuntu5
+  From: openssl/libssl3@3.0.2-0ubuntu1.8
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libkrb5-3@1.19.2-2ubuntu0.1 > openssl/libssl3@3.0.2-0ubuntu1.8
+
+✗ Low severity vulnerability found in ncurses/libtinfo6
+  Description: Out-of-bounds Read
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-NCURSES-2801048
+  Introduced through: ncurses/libtinfo6@6.3-2, bash@5.1-6ubuntu1, ncurses/libncurses6@6.3-2, ncurses/libncursesw6@6.3-2, ncurses/ncurses-bin@6.3-2, procps@2:3.3.17-6ubuntu2, util-linux@2.37.2-4ubuntu3, ncurses/ncurses-base@6.3-2
+  From: ncurses/libtinfo6@6.3-2
+  From: bash@5.1-6ubuntu1 > ncurses/libtinfo6@6.3-2
+  From: ncurses/libncurses6@6.3-2 > ncurses/libtinfo6@6.3-2
+  and 10 more...
+
+✗ Low severity vulnerability found in libzstd/libzstd1
+  Description: Resource Exhaustion
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-LIBZSTD-3368800
+  Introduced through: meta-common-packages@meta
+  From: meta-common-packages@meta > libzstd/libzstd1@1.4.8+dfsg-3build1
+
+✗ Low severity vulnerability found in krb5/libkrb5support0
+  Description: Integer Overflow or Wraparound
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-KRB5-2797765
+  Introduced through: krb5/libkrb5support0@1.19.2-2ubuntu0.1, adduser@3.118ubuntu5, krb5/libk5crypto3@1.19.2-2ubuntu0.1, krb5/libkrb5-3@1.19.2-2ubuntu0.1, krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1
+  From: krb5/libkrb5support0@1.19.2-2ubuntu0.1
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libkrb5support0@1.19.2-2ubuntu0.1
+  From: adduser@3.118ubuntu5 > shadow/passwd@1:4.8.1-2ubuntu2.1 > pam/libpam-modules@1.4.0-11ubuntu2.3 > libnsl/libnsl2@1.3.0-2build2 > libtirpc/libtirpc3@1.3.2-2ubuntu0.1 > krb5/libgssapi-krb5-2@1.19.2-2ubuntu0.1 > krb5/libk5crypto3@1.19.2-2ubuntu0.1 > krb5/libkrb5support0@1.19.2-2ubuntu0.1
+  and 8 more...
+
+✗ Low severity vulnerability found in gnupg2/gpgv
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GNUPG2-3035409
+  Introduced through: gnupg2/gpgv@2.2.27-3ubuntu2.1, apt@2.4.8
+  From: gnupg2/gpgv@2.2.27-3ubuntu2.1
+  From: apt@2.4.8 > gnupg2/gpgv@2.2.27-3ubuntu2.1
+
+✗ Low severity vulnerability found in glibc/libc-bin
+  Description: Allocation of Resources Without Limits or Throttling
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-GLIBC-2801292
+  Introduced through: glibc/libc-bin@2.35-0ubuntu3.1, meta-common-packages@meta
+  From: glibc/libc-bin@2.35-0ubuntu3.1
+  From: meta-common-packages@meta > glibc/libc6@2.35-0ubuntu3.1
+
+✗ Low severity vulnerability found in coreutils
+  Description: Improper Input Validation
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-COREUTILS-2801226
+  Introduced through: coreutils@8.32-4.1ubuntu1
+  From: coreutils@8.32-4.1ubuntu1
+
+✗ Low severity vulnerability found in bash
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-UBUNTU2204-BASH-3098342
+  Introduced through: bash@5.1-6ubuntu1
+  From: bash@5.1-6ubuntu1
+
+
+
+Organization:      piotrkardasz-924
+Package manager:   deb
+Project name:      docker-image|piotrkardasz/sylius-distroless-base-images
+Docker image:      piotrkardasz/sylius-distroless-base-images:ubuntu-jammy
+Platform:          linux/amd64
+Licenses:          enabled
+
+Tested 102 dependencies for known issues, found 12 issues.
+
+

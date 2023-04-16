@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      .group-header th {
+        font-size: 200%;
+      }
+      .sub-header th {
+        font-size: 150%;
+      }
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        white-space: nowrap;
+        padding: .3em;
+      }
+      table {
+        margin: 0 auto;
+      }
+      .severity {
+        text-align: center;
+        font-weight: bold;
+        color: #fafafa;
+      }
+      .severity-LOW .severity { background-color: #5fbb31; }
+      .severity-MEDIUM .severity { background-color: #e9c600; }
+      .severity-HIGH .severity { background-color: #ff8800; }
+      .severity-CRITICAL .severity { background-color: #e40000; }
+      .severity-UNKNOWN .severity { background-color: #747474; }
+      .severity-LOW { background-color: #5fbb3160; }
+      .severity-MEDIUM { background-color: #e9c60060; }
+      .severity-HIGH { background-color: #ff880060; }
+      .severity-CRITICAL { background-color: #e4000060; }
+      .severity-UNKNOWN { background-color: #74747460; }
+      table tr td:first-of-type {
+        font-weight: bold;
+      }
+      .links a,
+      .links[data-more-links=on] a {
+        display: block;
+      }
+      .links[data-more-links=off] a:nth-of-type(1n+5) {
+        display: none;
+      }
+      a.toggle-more-links { cursor: pointer; }
+    </style>
+    <title>piotrkardasz/sylius-distroless-base-images:ubuntu-jammy (ubuntu 22.04) - Trivy Report - 2023-04-15 22:50:33.058232123 +0200 CEST m=+0.691330461 </title>
+    <script>
+      window.onload = function() {
+        document.querySelectorAll('td.links').forEach(function(linkCell) {
+          var links = [].concat.apply([], linkCell.querySelectorAll('a'));
+          [].sort.apply(links, function(a, b) {
+            return a.href > b.href ? 1 : -1;
+          });
+          links.forEach(function(link, idx) {
+            if (links.length > 3 && 3 === idx) {
+              var toggleLink = document.createElement('a');
+              toggleLink.innerText = "Toggle more links";
+              toggleLink.href = "#toggleMore";
+              toggleLink.setAttribute("class", "toggle-more-links");
+              linkCell.appendChild(toggleLink);
+            }
+            linkCell.appendChild(link);
+          });
+        });
+        document.querySelectorAll('a.toggle-more-links').forEach(function(toggleLink) {
+          toggleLink.onclick = function() {
+            var expanded = toggleLink.parentElement.getAttribute("data-more-links");
+            toggleLink.parentElement.setAttribute("data-more-links", "on" === expanded ? "off" : "on");
+            return false;
+          };
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>piotrkardasz/sylius-distroless-base-images:ubuntu-jammy (ubuntu 22.04) - Trivy Report - 2023-04-15 22:50:33.058259024 +0200 CEST m=+0.691357462</h1>
+    <table>
+      <tr class="group-header"><th colspan="6">ubuntu</th></tr>
+      <tr class="sub-header">
+        <th>Package</th>
+        <th>Vulnerability ID</th>
+        <th>Severity</th>
+        <th>Installed Version</th>
+        <th>Fixed Version</th>
+        <th>Links</th>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">bash</td>
+        <td>CVE-2022-3715</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">5.1-6ubuntu1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/errata/RHSA-2023:0340">https://access.redhat.com/errata/RHSA-2023:0340</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-3715">https://access.redhat.com/security/cve/CVE-2022-3715</a>
+          <a href="https://bugzilla.redhat.com/2126720">https://bugzilla.redhat.com/2126720</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2126720">https://bugzilla.redhat.com/show_bug.cgi?id=2126720</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3715">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3715</a>
+          <a href="https://errata.almalinux.org/9/ALSA-2023-0340.html">https://errata.almalinux.org/9/ALSA-2023-0340.html</a>
+          <a href="https://errata.rockylinux.org/RLSA-2023:0340">https://errata.rockylinux.org/RLSA-2023:0340</a>
+          <a href="https://linux.oracle.com/cve/CVE-2022-3715.html">https://linux.oracle.com/cve/CVE-2022-3715.html</a>
+          <a href="https://linux.oracle.com/errata/ELSA-2023-0340.html">https://linux.oracle.com/errata/ELSA-2023-0340.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-bash/2022-08/msg00147.html">https://lists.gnu.org/archive/html/bug-bash/2022-08/msg00147.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3715">https://nvd.nist.gov/vuln/detail/CVE-2022-3715</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-3715">https://www.cve.org/CVERecord?id=CVE-2022-3715</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">coreutils</td>
+        <td>CVE-2016-2781</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">8.32-4.1ubuntu1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/oss-sec/2016/q1/452">http://seclists.org/oss-sec/2016/q1/452</a>
+          <a href="http://www.openwall.com/lists/oss-security/2016/02/28/2">http://www.openwall.com/lists/oss-security/2016/02/28/2</a>
+          <a href="http://www.openwall.com/lists/oss-security/2016/02/28/3">http://www.openwall.com/lists/oss-security/2016/02/28/3</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2016-2781">https://access.redhat.com/security/cve/CVE-2016-2781</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2781">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-2781</a>
+          <a href="https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E">https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E</a>
+          <a href="https://lore.kernel.org/patchwork/patch/793178/">https://lore.kernel.org/patchwork/patch/793178/</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2016-2781">https://nvd.nist.gov/vuln/detail/CVE-2016-2781</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2016-2781">https://www.cve.org/CVERecord?id=CVE-2016-2781</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">gpgv</td>
+        <td>CVE-2022-3219</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">2.2.27-3ubuntu2.1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2022-3219">https://access.redhat.com/security/cve/CVE-2022-3219</a>
+          <a href="https://bugzilla.redhat.com/show_bug.cgi?id=2127010">https://bugzilla.redhat.com/show_bug.cgi?id=2127010</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3219">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3219</a>
+          <a href="https://dev.gnupg.org/D556">https://dev.gnupg.org/D556</a>
+          <a href="https://dev.gnupg.org/T5993">https://dev.gnupg.org/T5993</a>
+          <a href="https://marc.info/?l=oss-security&amp;m=165696590211434&amp;w=4">https://marc.info/?l=oss-security&amp;m=165696590211434&amp;w=4</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3219">https://nvd.nist.gov/vuln/detail/CVE-2022-3219</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230324-0001/">https://security.netapp.com/advisory/ntap-20230324-0001/</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-3219">https://www.cve.org/CVERecord?id=CVE-2022-3219</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libc-bin</td>
+        <td>CVE-2016-20013</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">2.35-0ubuntu3.1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://akkadia.org/drepper/SHA-crypt.txt">https://akkadia.org/drepper/SHA-crypt.txt</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-20013">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-20013</a>
+          <a href="https://pthree.org/2018/05/23/do-not-use-sha256crypt-sha512crypt-theyre-dangerous/">https://pthree.org/2018/05/23/do-not-use-sha256crypt-sha512crypt-theyre-dangerous/</a>
+          <a href="https://twitter.com/solardiz/status/795601240151457793">https://twitter.com/solardiz/status/795601240151457793</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libc6</td>
+        <td>CVE-2016-20013</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">2.35-0ubuntu3.1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://akkadia.org/drepper/SHA-crypt.txt">https://akkadia.org/drepper/SHA-crypt.txt</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-20013">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-20013</a>
+          <a href="https://pthree.org/2018/05/23/do-not-use-sha256crypt-sha512crypt-theyre-dangerous/">https://pthree.org/2018/05/23/do-not-use-sha256crypt-sha512crypt-theyre-dangerous/</a>
+          <a href="https://twitter.com/solardiz/status/795601240151457793">https://twitter.com/solardiz/status/795601240151457793</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libncurses6</td>
+        <td>CVE-2022-29458</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">6.3-2</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/fulldisclosure/2022/Oct/41">http://seclists.org/fulldisclosure/2022/Oct/41</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-29458">https://access.redhat.com/security/cve/CVE-2022-29458</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458</a>
+          <a href="https://invisible-island.net/ncurses/NEWS.html#t20220416">https://invisible-island.net/ncurses/NEWS.html#t20220416</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29458">https://nvd.nist.gov/vuln/detail/CVE-2022-29458</a>
+          <a href="https://support.apple.com/kb/HT213488">https://support.apple.com/kb/HT213488</a>
+          <a href="https://ubuntu.com/security/notices/USN-5477-1">https://ubuntu.com/security/notices/USN-5477-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-29458">https://www.cve.org/CVERecord?id=CVE-2022-29458</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libncursesw6</td>
+        <td>CVE-2022-29458</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">6.3-2</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/fulldisclosure/2022/Oct/41">http://seclists.org/fulldisclosure/2022/Oct/41</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-29458">https://access.redhat.com/security/cve/CVE-2022-29458</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458</a>
+          <a href="https://invisible-island.net/ncurses/NEWS.html#t20220416">https://invisible-island.net/ncurses/NEWS.html#t20220416</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29458">https://nvd.nist.gov/vuln/detail/CVE-2022-29458</a>
+          <a href="https://support.apple.com/kb/HT213488">https://support.apple.com/kb/HT213488</a>
+          <a href="https://ubuntu.com/security/notices/USN-5477-1">https://ubuntu.com/security/notices/USN-5477-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-29458">https://www.cve.org/CVERecord?id=CVE-2022-29458</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libpcre3</td>
+        <td>CVE-2017-11164</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">2:8.39-13ubuntu0.22.04.1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://openwall.com/lists/oss-security/2017/07/11/3">http://openwall.com/lists/oss-security/2017/07/11/3</a>
+          <a href="http://www.openwall.com/lists/oss-security/2023/04/11/1">http://www.openwall.com/lists/oss-security/2023/04/11/1</a>
+          <a href="http://www.openwall.com/lists/oss-security/2023/04/12/1">http://www.openwall.com/lists/oss-security/2023/04/12/1</a>
+          <a href="http://www.securityfocus.com/bid/99575">http://www.securityfocus.com/bid/99575</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2017-11164">https://access.redhat.com/security/cve/CVE-2017-11164</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11164">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-11164</a>
+          <a href="https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E">https://lists.apache.org/thread.html/rf9fa47ab66495c78bb4120b0754dd9531ca2ff0430f6685ac9b07772@%3Cdev.mina.apache.org%3E</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2017-11164">https://nvd.nist.gov/vuln/detail/CVE-2017-11164</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2017-11164">https://www.cve.org/CVERecord?id=CVE-2017-11164</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libssl3</td>
+        <td>CVE-2022-3996</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">3.0.2-0ubuntu1.8</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2022-3996">https://access.redhat.com/security/cve/CVE-2022-3996</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3996">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-3996</a>
+          <a href="https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7">https://github.com/openssl/openssl/commit/7725e7bfe6f2ce8146b6552b44e0d226be7638e7</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3996">https://nvd.nist.gov/vuln/detail/CVE-2022-3996</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-3996">https://www.cve.org/CVERecord?id=CVE-2022-3996</a>
+          <a href="https://www.openssl.org/news/secadv/20221213.txt">https://www.openssl.org/news/secadv/20221213.txt</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libssl3</td>
+        <td>CVE-2023-0464</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">3.0.2-0ubuntu1.8</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-0464">https://access.redhat.com/security/cve/CVE-2023-0464</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0464</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2017771e2db3e2b96f89bbe8766c3209f6a99545">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2017771e2db3e2b96f89bbe8766c3209f6a99545</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2dcd4f1e3115f38cefa43e3efbe9b801c27e642e">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=2dcd4f1e3115f38cefa43e3efbe9b801c27e642e</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=879f7080d7e141f415c79eaa3a8ac4a3dad0348b">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=879f7080d7e141f415c79eaa3a8ac4a3dad0348b</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=959c59c7a0164117e7f8366466a32bb1f8d77ff1">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=959c59c7a0164117e7f8366466a32bb1f8d77ff1</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0464">https://nvd.nist.gov/vuln/detail/CVE-2023-0464</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-0464">https://www.cve.org/CVERecord?id=CVE-2023-0464</a>
+          <a href="https://www.openssl.org/news/secadv/20230322.txt">https://www.openssl.org/news/secadv/20230322.txt</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libssl3</td>
+        <td>CVE-2023-0465</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">3.0.2-0ubuntu1.8</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-0465">https://access.redhat.com/security/cve/CVE-2023-0465</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0465">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0465</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=10325176f3d3e98c6e2b3bf5ab1e3b334de6947a">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=10325176f3d3e98c6e2b3bf5ab1e3b334de6947a</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=1dd43e0709fece299b15208f36cc7c76209ba0bb">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=1dd43e0709fece299b15208f36cc7c76209ba0bb</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=b013765abfa80036dc779dd0e50602c57bb3bf95">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=b013765abfa80036dc779dd0e50602c57bb3bf95</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=facfb1ab745646e97a1920977ae4a9965ea61d5c">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=facfb1ab745646e97a1920977ae4a9965ea61d5c</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0465">https://nvd.nist.gov/vuln/detail/CVE-2023-0465</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230414-0001/">https://security.netapp.com/advisory/ntap-20230414-0001/</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-0465">https://www.cve.org/CVERecord?id=CVE-2023-0465</a>
+          <a href="https://www.openssl.org/news/secadv/20230328.txt">https://www.openssl.org/news/secadv/20230328.txt</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libssl3</td>
+        <td>CVE-2023-0466</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">3.0.2-0ubuntu1.8</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2023-0466">https://access.redhat.com/security/cve/CVE-2023-0466</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0466">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0466</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=0d16b7e99aafc0b4a6d729eec65a411a7e025f0a">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=0d16b7e99aafc0b4a6d729eec65a411a7e025f0a</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=51e8a84ce742db0f6c70510d0159dad8f7825908">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=51e8a84ce742db0f6c70510d0159dad8f7825908</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=73398dea26de9899fb4baa94098ad0a61f435c72">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=73398dea26de9899fb4baa94098ad0a61f435c72</a>
+          <a href="https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=fc814a30fc4f0bc54fcea7d9a7462f5457aab061">https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=fc814a30fc4f0bc54fcea7d9a7462f5457aab061</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2023-0466">https://nvd.nist.gov/vuln/detail/CVE-2023-0466</a>
+          <a href="https://security.netapp.com/advisory/ntap-20230414-0001/">https://security.netapp.com/advisory/ntap-20230414-0001/</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2023-0466">https://www.cve.org/CVERecord?id=CVE-2023-0466</a>
+          <a href="https://www.openssl.org/news/secadv/20230328.txt">https://www.openssl.org/news/secadv/20230328.txt</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libtinfo6</td>
+        <td>CVE-2022-29458</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">6.3-2</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/fulldisclosure/2022/Oct/41">http://seclists.org/fulldisclosure/2022/Oct/41</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-29458">https://access.redhat.com/security/cve/CVE-2022-29458</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458</a>
+          <a href="https://invisible-island.net/ncurses/NEWS.html#t20220416">https://invisible-island.net/ncurses/NEWS.html#t20220416</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29458">https://nvd.nist.gov/vuln/detail/CVE-2022-29458</a>
+          <a href="https://support.apple.com/kb/HT213488">https://support.apple.com/kb/HT213488</a>
+          <a href="https://ubuntu.com/security/notices/USN-5477-1">https://ubuntu.com/security/notices/USN-5477-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-29458">https://www.cve.org/CVERecord?id=CVE-2022-29458</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">libzstd1</td>
+        <td>CVE-2022-4899</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">1.4.8+dfsg-3build1</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="https://access.redhat.com/security/cve/CVE-2022-4899">https://access.redhat.com/security/cve/CVE-2022-4899</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4899">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-4899</a>
+          <a href="https://github.com/facebook/zstd/issues/3200">https://github.com/facebook/zstd/issues/3200</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-4899">https://nvd.nist.gov/vuln/detail/CVE-2022-4899</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-4899">https://www.cve.org/CVERecord?id=CVE-2022-4899</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">ncurses-base</td>
+        <td>CVE-2022-29458</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">6.3-2</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/fulldisclosure/2022/Oct/41">http://seclists.org/fulldisclosure/2022/Oct/41</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-29458">https://access.redhat.com/security/cve/CVE-2022-29458</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458</a>
+          <a href="https://invisible-island.net/ncurses/NEWS.html#t20220416">https://invisible-island.net/ncurses/NEWS.html#t20220416</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29458">https://nvd.nist.gov/vuln/detail/CVE-2022-29458</a>
+          <a href="https://support.apple.com/kb/HT213488">https://support.apple.com/kb/HT213488</a>
+          <a href="https://ubuntu.com/security/notices/USN-5477-1">https://ubuntu.com/security/notices/USN-5477-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-29458">https://www.cve.org/CVERecord?id=CVE-2022-29458</a>
+        </td>
+      </tr>
+      <tr class="severity-LOW">
+        <td class="pkg-name">ncurses-bin</td>
+        <td>CVE-2022-29458</td>
+        <td class="severity">LOW</td>
+        <td class="pkg-version">6.3-2</td>
+        <td></td>
+        <td class="links" data-more-links="off">
+          <a href="http://seclists.org/fulldisclosure/2022/Oct/41">http://seclists.org/fulldisclosure/2022/Oct/41</a>
+          <a href="https://access.redhat.com/security/cve/CVE-2022-29458">https://access.redhat.com/security/cve/CVE-2022-29458</a>
+          <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458">https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-29458</a>
+          <a href="https://invisible-island.net/ncurses/NEWS.html#t20220416">https://invisible-island.net/ncurses/NEWS.html#t20220416</a>
+          <a href="https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html">https://lists.debian.org/debian-lts-announce/2022/10/msg00037.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00014.html</a>
+          <a href="https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html">https://lists.gnu.org/archive/html/bug-ncurses/2022-04/msg00016.html</a>
+          <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-29458">https://nvd.nist.gov/vuln/detail/CVE-2022-29458</a>
+          <a href="https://support.apple.com/kb/HT213488">https://support.apple.com/kb/HT213488</a>
+          <a href="https://ubuntu.com/security/notices/USN-5477-1">https://ubuntu.com/security/notices/USN-5477-1</a>
+          <a href="https://www.cve.org/CVERecord?id=CVE-2022-29458">https://www.cve.org/CVERecord?id=CVE-2022-29458</a>
+        </td>
+      </tr>
+      <tr><th colspan="6">No Misconfigurations found</th></tr>
+    </table>
+  </body>
+</html>
