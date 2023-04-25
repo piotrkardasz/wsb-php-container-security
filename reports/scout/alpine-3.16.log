@@ -1,5 +1,7 @@
-Analyzing image piotrkardasz/sylius-distroless-base-images:alpine-3.16
-    ✓ SBOM of image already cached, 18 packages indexed
+    ...Storing image for indexing
+    ✓ Image stored for indexing
+    ...Indexing
+WARN Failed to parse purl: pkg:/@1.35.0    ✓ Indexed 18 packages
     ✓ No vulnerable package detected
 
 

@@ -1,5 +1,5 @@
 
-Testing piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim...
+Testing debian:bullseye-slim...
 
 ✗ Low severity vulnerability found in util-linux/libblkid1
   Description: Information Exposure
@@ -95,7 +95,7 @@ Testing piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim...
   and 1 more...
 
 ✗ Low severity vulnerability found in shadow/passwd
-  Description: CVE-2023-29383
+  Description: Arbitrary Code Injection
   Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-SHADOW-5423922
   Introduced through: shadow/passwd@1:4.8.1-1, adduser@3.118, shadow/login@1:4.8.1-1, util-linux/mount@2.36.1-8+deb11u1
   From: shadow/passwd@1:4.8.1-1
@@ -188,15 +188,6 @@ Testing piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim...
 ✗ Low severity vulnerability found in ncurses/libtinfo6
   Description: Out-of-bounds Read
   Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-NCURSES-2767191
-  Introduced through: ncurses/libtinfo6@6.2+20201114-2, bash@5.1-2+deb11u1, ncurses/ncurses-bin@6.2+20201114-2, util-linux/mount@2.36.1-8+deb11u1, ncurses/ncurses-base@6.2+20201114-2
-  From: ncurses/libtinfo6@6.2+20201114-2
-  From: bash@5.1-2+deb11u1 > ncurses/libtinfo6@6.2+20201114-2
-  From: ncurses/ncurses-bin@6.2+20201114-2 > ncurses/libtinfo6@6.2+20201114-2
-  and 3 more...
-
-✗ Low severity vulnerability found in ncurses/libtinfo6
-  Description: CVE-2023-29491
-  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-NCURSES-5421197
   Introduced through: ncurses/libtinfo6@6.2+20201114-2, bash@5.1-2+deb11u1, ncurses/ncurses-bin@6.2+20201114-2, util-linux/mount@2.36.1-8+deb11u1, ncurses/ncurses-base@6.2+20201114-2
   From: ncurses/libtinfo6@6.2+20201114-2
   From: bash@5.1-2+deb11u1 > ncurses/libtinfo6@6.2+20201114-2
@@ -371,12 +362,21 @@ Testing piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim...
   From: apt@2.2.4 > apt/libapt-pkg6.0@2.2.4
   From: apt@2.2.4
 
+✗ High severity vulnerability found in ncurses/libtinfo6
+  Description: Out-of-bounds Write
+  Info: https://security.snyk.io/vuln/SNYK-DEBIAN11-NCURSES-5421197
+  Introduced through: ncurses/libtinfo6@6.2+20201114-2, bash@5.1-2+deb11u1, ncurses/ncurses-bin@6.2+20201114-2, util-linux/mount@2.36.1-8+deb11u1, ncurses/ncurses-base@6.2+20201114-2
+  From: ncurses/libtinfo6@6.2+20201114-2
+  From: bash@5.1-2+deb11u1 > ncurses/libtinfo6@6.2+20201114-2
+  From: ncurses/ncurses-bin@6.2+20201114-2 > ncurses/libtinfo6@6.2+20201114-2
+  and 3 more...
+
 
 
 Organization:      piotrkardasz-924
 Package manager:   deb
-Project name:      docker-image|piotrkardasz/sylius-distroless-base-images
-Docker image:      piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim
+Project name:      docker-image|debian
+Docker image:      debian:bullseye-slim
 Platform:          linux/amd64
 Base image:        debian:11.6-slim
 Licenses:          enabled

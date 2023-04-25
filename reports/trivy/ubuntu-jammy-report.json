@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "ArtifactName": "piotrkardasz/sylius-distroless-base-images:ubuntu-jammy",
+  "ArtifactName": "ubuntu:22.04",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
@@ -14,11 +14,13 @@
     "RepoTags": [
       "ubuntu:22.04",
       "ubuntu:jammy",
-      "piotrkardasz/sylius-distroless-base-images:ubuntu-jammy"
+      "piotrkardasz/sylius-distroless-base-images:ubuntu-jammy",
+      "public.ecr.aws/lts/ubuntu:22.04"
     ],
     "RepoDigests": [
       "ubuntu@sha256:67211c14fa74f070d27cc59d69a7fa9aeff8e28ea118ef3babc295a0428a6d21",
-      "piotrkardasz/sylius-distroless-base-images@sha256:5523f822d85895b0a75236aba20ff6bf4135721b031fceee7a5c4a74a700c1e6"
+      "piotrkardasz/sylius-distroless-base-images@sha256:5523f822d85895b0a75236aba20ff6bf4135721b031fceee7a5c4a74a700c1e6",
+      "public.ecr.aws/lts/ubuntu@sha256:5f6d7e4dad348dbbae3c1e960dcaba98c2e262902c67c9bc41d5f2417cebaeb8"
     ],
     "ImageConfig": {
       "architecture": "amd64",
@@ -80,7 +82,7 @@
   },
   "Results": [
     {
-      "Target": "piotrkardasz/sylius-distroless-base-images:ubuntu-jammy (ubuntu 22.04)",
+      "Target": "ubuntu:22.04 (ubuntu 22.04)",
       "Class": "os-pkgs",
       "Type": "ubuntu",
       "Packages": [
@@ -2263,7 +2265,7 @@
             "Name": "Ubuntu CVE Tracker",
             "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
           },
-          "Title": "bash: a heap-buffer-overflow in valid_parameter_transform",
+          "Title": "a heap-buffer-overflow in valid_parameter_transform",
           "Description": "A flaw was found in the bash package, where a heap-buffer overflow can occur in valid parameter_transform. This issue may lead to memory problems.",
           "Severity": "LOW",
           "CweIDs": [
@@ -2789,6 +2791,43 @@
           "LastModifiedDate": "2023-04-14T23:15:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2023-1255",
+          "PkgID": "libssl3@3.0.2-0ubuntu1.8",
+          "PkgName": "libssl3",
+          "InstalledVersion": "3.0.2-0ubuntu1.8",
+          "Layer": {
+            "DiffID": "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-1255",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "Input buffer over-read in AES-XTS implementation on 64 bit ARM",
+          "Description": "Issue summary: The AES-XTS cipher decryption implementation for 64 bit ARM\nplatform contains a bug that could cause it to read past the input buffer,\nleading to a crash.\n\nImpact summary: Applications that use the AES-XTS algorithm on the 64 bit ARM\nplatform can crash in rare circumstances. The AES-XTS algorithm is usually\nused for disk encryption.\n\nThe AES-XTS cipher decryption implementation for 64 bit ARM platform will read\npast the end of the ciphertext buffer if the ciphertext size is 4 mod 5 in 16\nbyte blocks, e.g. 144 bytes or 1024 bytes. If the memory after the ciphertext\nbuffer is unmapped, this will trigger a crash which results in a denial of\nservice.\n\nIf an attacker can control the size and location of the ciphertext buffer\nbeing decrypted by an application using AES-XTS on 64 bit ARM, the\napplication is affected. This is fairly unlikely making this issue\na Low severity one.",
+          "Severity": "LOW",
+          "CVSS": {
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 5.1
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-1255",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-1255",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=02ac9c9420275868472f33b01def01218742b8bb",
+            "https://git.openssl.org/gitweb/?p=openssl.git;a=commitdiff;h=bc2f61ad70971869b242fc1cb445b98bad50074a",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-1255",
+            "https://www.cve.org/CVERecord?id=CVE-2023-1255",
+            "https://www.openssl.org/news/secadv/20230419.txt",
+            "https://www.openssl.org/news/secadv/20230420.txt"
+          ],
+          "PublishedDate": "2023-04-20T17:15:00Z",
+          "LastModifiedDate": "2023-04-21T09:15:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2022-29458",
           "PkgID": "libtinfo6@6.3-2",
           "PkgName": "libtinfo6",
@@ -2852,7 +2891,7 @@
             "Name": "Ubuntu CVE Tracker",
             "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
           },
-          "Title": "zstd: buffer overrun in util.c",
+          "Title": "buffer overrun in util.c",
           "Description": "A vulnerability was found in zstd v1.4.10, where an attacker can supply empty string as an argument to the command line tool to cause buffer overrun.",
           "Severity": "LOW",
           "CweIDs": [
@@ -2864,8 +2903,8 @@
               "V3Score": 7.5
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
-              "V3Score": 4.7
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.9
             }
           },
           "References": [
@@ -2877,6 +2916,50 @@
           ],
           "PublishedDate": "2023-03-31T20:15:00Z",
           "LastModifiedDate": "2023-04-07T01:19:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-29383",
+          "PkgID": "login@1:4.8.1-2ubuntu2.1",
+          "PkgName": "login",
+          "InstalledVersion": "1:4.8.1-2ubuntu2.1",
+          "Layer": {
+            "DiffID": "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29383",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "Improper input validation in shadow-utils package utility chfn",
+          "Description": "In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the /etc/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat /etc/passwd\" shows a rogue user account.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-74"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-29383",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29383",
+            "https://github.com/shadow-maint/shadow/commit/e5905c4b84d4fb90aefcd96ee618411ebfac663d",
+            "https://github.com/shadow-maint/shadow/pull/687",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "https://www.cve.org/CVERecord?id=CVE-2023-29383",
+            "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/cve-2023-29383-abusing-linux-chfn-to-misrepresent-etc-passwd/",
+            "https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=31797"
+          ],
+          "PublishedDate": "2023-04-14T22:15:00Z",
+          "LastModifiedDate": "2023-04-24T18:05:00Z"
         },
         {
           "VulnerabilityID": "CVE-2022-29458",
@@ -2975,6 +3058,50 @@
           ],
           "PublishedDate": "2022-04-18T21:15:00Z",
           "LastModifiedDate": "2022-11-08T19:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-29383",
+          "PkgID": "passwd@1:4.8.1-2ubuntu2.1",
+          "PkgName": "passwd",
+          "InstalledVersion": "1:4.8.1-2ubuntu2.1",
+          "Layer": {
+            "DiffID": "sha256:b93c1bd012ab8fda60f5b4f5906bf244586e0e3292d84571d3abb56472248466"
+          },
+          "SeveritySource": "ubuntu",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29383",
+          "DataSource": {
+            "ID": "ubuntu",
+            "Name": "Ubuntu CVE Tracker",
+            "URL": "https://git.launchpad.net/ubuntu-cve-tracker"
+          },
+          "Title": "Improper input validation in shadow-utils package utility chfn",
+          "Description": "In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the /etc/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat /etc/passwd\" shows a rogue user account.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-74"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-29383",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29383",
+            "https://github.com/shadow-maint/shadow/commit/e5905c4b84d4fb90aefcd96ee618411ebfac663d",
+            "https://github.com/shadow-maint/shadow/pull/687",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "https://www.cve.org/CVERecord?id=CVE-2023-29383",
+            "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/cve-2023-29383-abusing-linux-chfn-to-misrepresent-etc-passwd/",
+            "https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=31797"
+          ],
+          "PublishedDate": "2023-04-14T22:15:00Z",
+          "LastModifiedDate": "2023-04-24T18:05:00Z"
         }
       ]
     }

@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "ArtifactName": "piotrkardasz/sylius-distroless-base-images:alpine-3.16",
+  "ArtifactName": "alpine:3.16",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
@@ -55,7 +55,7 @@
   },
   "Results": [
     {
-      "Target": "piotrkardasz/sylius-distroless-base-images:alpine-3.16 (alpine 3.16.5)",
+      "Target": "alpine:3.16 (alpine 3.16.5)",
       "Class": "os-pkgs",
       "Type": "alpine",
       "Packages": [

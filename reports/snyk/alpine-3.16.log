@@ -1,10 +1,10 @@
 
-Testing piotrkardasz/sylius-distroless-base-images:alpine-3.16...
+Testing alpine:3.16...
 
 Organization:      piotrkardasz-924
 Package manager:   apk
-Project name:      docker-image|piotrkardasz/sylius-distroless-base-images
-Docker image:      piotrkardasz/sylius-distroless-base-images:alpine-3.16
+Project name:      docker-image|alpine
+Docker image:      alpine:3.16
 Platform:          linux/amd64
 Base image:        alpine:3.16.5
 Licenses:          enabled

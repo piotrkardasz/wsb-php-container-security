@@ -1,6 +1,6 @@
 {
   "SchemaVersion": 2,
-  "ArtifactName": "piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim",
+  "ArtifactName": "debian:bullseye-slim",
   "ArtifactType": "container_image",
   "Metadata": {
     "OS": {
@@ -55,7 +55,7 @@
   },
   "Results": [
     {
-      "Target": "piotrkardasz/sylius-distroless-base-images:debian-bullseye-slim (debian 11.6)",
+      "Target": "debian:bullseye-slim (debian 11.6)",
       "Class": "os-pkgs",
       "Type": "debian",
       "Packages": [
@@ -2163,7 +2163,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Title": "bash: a heap-buffer-overflow in valid_parameter_transform",
+          "Title": "a heap-buffer-overflow in valid_parameter_transform",
           "Description": "A flaw was found in the bash package, where a heap-buffer overflow can occur in valid parameter_transform. This issue may lead to memory problems.",
           "Severity": "HIGH",
           "CweIDs": [
@@ -4129,7 +4129,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Title": "libsepol: use-after-free in cil_reset_classpermission()",
+          "Title": "use-after-free in cil_reset_classpermission()",
           "Description": "The CIL compiler in SELinux 3.2 has a use-after-free in cil_reset_classpermission (called from cil_reset_classperms_set and cil_reset_classperms_list).",
           "Severity": "LOW",
           "CweIDs": [
@@ -4799,6 +4799,43 @@
           "LastModifiedDate": "2022-11-08T19:46:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2023-29491",
+          "PkgID": "libtinfo6@6.2+20201114-2",
+          "PkgName": "libtinfo6",
+          "InstalledVersion": "6.2+20201114-2",
+          "Layer": {
+            "DiffID": "sha256:ed7b0ef3bf5bbec74379c3ae3d5339e666a314223e863c70644f7522a7527461"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29491",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses before 6.4 20230408, when used by a setuid application, allows ...",
+          "Description": "ncurses before 6.4 20230408, when used by a setuid application, allows local users to trigger security-relevant memory corruption via malformed data in a terminfo database file that is found in $HOME/.terminfo or reached via the TERMINFO or TERM environment variable.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            }
+          },
+          "References": [
+            "http://ncurses.scripts.mit.edu/?p=ncurses.git;a=commit;h=eb51b1ea1f75a0ec17c9c5937cb28df1e8eeec56",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/10",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/11",
+            "https://www.openwall.com/lists/oss-security/2023/04/12/5",
+            "https://www.openwall.com/lists/oss-security/2023/04/13/4"
+          ],
+          "PublishedDate": "2023-04-14T01:15:00Z",
+          "LastModifiedDate": "2023-04-24T13:23:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2022-3821",
           "PkgID": "libudev1@247.3-7+deb11u1",
           "PkgName": "libudev1",
@@ -5054,7 +5091,7 @@
             "Name": "Debian Security Tracker",
             "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
           },
-          "Title": "zstd: buffer overrun in util.c",
+          "Title": "buffer overrun in util.c",
           "Description": "A vulnerability was found in zstd v1.4.10, where an attacker can supply empty string as an argument to the command line tool to cause buffer overrun.",
           "Severity": "HIGH",
           "CweIDs": [
@@ -5066,8 +5103,8 @@
               "V3Score": 7.5
             },
             "redhat": {
-              "V3Vector": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
-              "V3Score": 4.7
+              "V3Vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "V3Score": 4.9
             }
           },
           "References": [
@@ -5220,6 +5257,50 @@
           "LastModifiedDate": "2020-08-25T15:15:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2023-29383",
+          "PkgID": "login@1:4.8.1-1",
+          "PkgName": "login",
+          "InstalledVersion": "1:4.8.1-1",
+          "Layer": {
+            "DiffID": "sha256:ed7b0ef3bf5bbec74379c3ae3d5339e666a314223e863c70644f7522a7527461"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29383",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "Improper input validation in shadow-utils package utility chfn",
+          "Description": "In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the /etc/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat /etc/passwd\" shows a rogue user account.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-74"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-29383",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29383",
+            "https://github.com/shadow-maint/shadow/commit/e5905c4b84d4fb90aefcd96ee618411ebfac663d",
+            "https://github.com/shadow-maint/shadow/pull/687",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "https://www.cve.org/CVERecord?id=CVE-2023-29383",
+            "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/cve-2023-29383-abusing-linux-chfn-to-misrepresent-etc-passwd/",
+            "https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=31797"
+          ],
+          "PublishedDate": "2023-04-14T22:15:00Z",
+          "LastModifiedDate": "2023-04-24T18:05:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2022-1304",
           "PkgID": "logsave@1.46.2-2",
           "PkgName": "logsave",
@@ -5365,6 +5446,43 @@
           "LastModifiedDate": "2022-11-08T19:46:00Z"
         },
         {
+          "VulnerabilityID": "CVE-2023-29491",
+          "PkgID": "ncurses-base@6.2+20201114-2",
+          "PkgName": "ncurses-base",
+          "InstalledVersion": "6.2+20201114-2",
+          "Layer": {
+            "DiffID": "sha256:ed7b0ef3bf5bbec74379c3ae3d5339e666a314223e863c70644f7522a7527461"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29491",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses before 6.4 20230408, when used by a setuid application, allows ...",
+          "Description": "ncurses before 6.4 20230408, when used by a setuid application, allows local users to trigger security-relevant memory corruption via malformed data in a terminfo database file that is found in $HOME/.terminfo or reached via the TERMINFO or TERM environment variable.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            }
+          },
+          "References": [
+            "http://ncurses.scripts.mit.edu/?p=ncurses.git;a=commit;h=eb51b1ea1f75a0ec17c9c5937cb28df1e8eeec56",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/10",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/11",
+            "https://www.openwall.com/lists/oss-security/2023/04/12/5",
+            "https://www.openwall.com/lists/oss-security/2023/04/13/4"
+          ],
+          "PublishedDate": "2023-04-14T01:15:00Z",
+          "LastModifiedDate": "2023-04-24T13:23:00Z"
+        },
+        {
           "VulnerabilityID": "CVE-2022-29458",
           "PkgID": "ncurses-bin@6.2+20201114-2",
           "PkgName": "ncurses-bin",
@@ -5412,6 +5530,43 @@
           ],
           "PublishedDate": "2022-04-18T21:15:00Z",
           "LastModifiedDate": "2022-11-08T19:46:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-29491",
+          "PkgID": "ncurses-bin@6.2+20201114-2",
+          "PkgName": "ncurses-bin",
+          "InstalledVersion": "6.2+20201114-2",
+          "Layer": {
+            "DiffID": "sha256:ed7b0ef3bf5bbec74379c3ae3d5339e666a314223e863c70644f7522a7527461"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29491",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "ncurses before 6.4 20230408, when used by a setuid application, allows ...",
+          "Description": "ncurses before 6.4 20230408, when used by a setuid application, allows local users to trigger security-relevant memory corruption via malformed data in a terminfo database file that is found in $HOME/.terminfo or reached via the TERMINFO or TERM environment variable.",
+          "Severity": "HIGH",
+          "CweIDs": [
+            "CWE-787"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "V3Score": 7.8
+            }
+          },
+          "References": [
+            "http://ncurses.scripts.mit.edu/?p=ncurses.git;a=commit;h=eb51b1ea1f75a0ec17c9c5937cb28df1e8eeec56",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/10",
+            "http://www.openwall.com/lists/oss-security/2023/04/19/11",
+            "https://www.openwall.com/lists/oss-security/2023/04/12/5",
+            "https://www.openwall.com/lists/oss-security/2023/04/13/4"
+          ],
+          "PublishedDate": "2023-04-14T01:15:00Z",
+          "LastModifiedDate": "2023-04-24T13:23:00Z"
         },
         {
           "VulnerabilityID": "CVE-2007-5686",
@@ -5551,6 +5706,50 @@
           ],
           "PublishedDate": "2019-12-18T16:15:00Z",
           "LastModifiedDate": "2020-08-25T15:15:00Z"
+        },
+        {
+          "VulnerabilityID": "CVE-2023-29383",
+          "PkgID": "passwd@1:4.8.1-1",
+          "PkgName": "passwd",
+          "InstalledVersion": "1:4.8.1-1",
+          "Layer": {
+            "DiffID": "sha256:ed7b0ef3bf5bbec74379c3ae3d5339e666a314223e863c70644f7522a7527461"
+          },
+          "SeveritySource": "nvd",
+          "PrimaryURL": "https://avd.aquasec.com/nvd/cve-2023-29383",
+          "DataSource": {
+            "ID": "debian",
+            "Name": "Debian Security Tracker",
+            "URL": "https://salsa.debian.org/security-tracker-team/security-tracker"
+          },
+          "Title": "Improper input validation in shadow-utils package utility chfn",
+          "Description": "In Shadow 4.13, it is possible to inject control characters into fields provided to the SUID program chfn (change finger). Although it is not possible to exploit this directly (e.g., adding a new user fails because \\n is in the block list), it is possible to misrepresent the /etc/passwd file when viewed. Use of \\r manipulations and Unicode characters to work around blocking of the : character make it possible to give the impression that a new user has been added. In other words, an adversary may be able to convince a system administrator to take the system offline (an indirect, social-engineered denial of service) by demonstrating that \"cat /etc/passwd\" shows a rogue user account.",
+          "Severity": "LOW",
+          "CweIDs": [
+            "CWE-74"
+          ],
+          "CVSS": {
+            "nvd": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "V3Score": 3.3
+            },
+            "redhat": {
+              "V3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "V3Score": 5.5
+            }
+          },
+          "References": [
+            "https://access.redhat.com/security/cve/CVE-2023-29383",
+            "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-29383",
+            "https://github.com/shadow-maint/shadow/commit/e5905c4b84d4fb90aefcd96ee618411ebfac663d",
+            "https://github.com/shadow-maint/shadow/pull/687",
+            "https://nvd.nist.gov/vuln/detail/CVE-2023-29383",
+            "https://www.cve.org/CVERecord?id=CVE-2023-29383",
+            "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/cve-2023-29383-abusing-linux-chfn-to-misrepresent-etc-passwd/",
+            "https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=31797"
+          ],
+          "PublishedDate": "2023-04-14T22:15:00Z",
+          "LastModifiedDate": "2023-04-24T18:05:00Z"
         },
         {
           "VulnerabilityID": "CVE-2020-16156",
